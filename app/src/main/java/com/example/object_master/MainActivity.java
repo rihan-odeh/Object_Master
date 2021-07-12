@@ -9,17 +9,28 @@ public class MainActivity extends AppCompatActivity {
     Human human;
     EditText editText;
     Human humanAttacked;
+    Samurai samurai ;
+    Wizard wizard;
+    Ninja ninja;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         human = new Human();
-        humanAttacked= new Human();
-        editText= findViewById(R.id.properties);
+        samurai = new Samurai();
+        wizard = new Wizard();
+        ninja = new Ninja();
+        humanAttacked = new Human();
+        editText = findViewById(R.id.properties);
+     /*   human.attack(humanAttacked);
         human.attack(humanAttacked);
         human.attack(humanAttacked);
-        human.attack(humanAttacked);
-        editText.setText(String.valueOf(humanAttacked.getHealth()));
+        editText.setText(String.valueOf(humanAttacked.getHealth()));*/
+        wizard.heal(samurai);
+        editText.setText(String.valueOf(samurai.getHealth()));
+
+
     }
 }

@@ -1,15 +1,18 @@
 package com.example.object_master;
 
 public class Human {
-    private int strength, stealth, intelligence, health;
+    private int strength, stealth, intelligence, health, wizardCount , ninjaCount , samuraiCount;
 
     public Human() {
         stealth = 3;
         strength = 3;
         intelligence = 3;
-        health =100;
+        health = 100;
+        wizardCount=0;
+        ninjaCount=0;
+        samuraiCount=0;
     }
-   // public Human(int strength, int stealth, int )
+    // public Human(int strength, int stealth, int )
 
     public int getHealth() {
         return health;
@@ -42,7 +45,32 @@ public class Human {
     public void setStrength(int strength) {
         this.strength = strength;
     }
-    public void attack(Human human){
+
+    public void attack(Human human) {
         human.health -= this.strength;
+    }
+
+    public int getNinjaCount() {
+        return ninjaCount;
+    }
+
+    public int getSamuraiCount() {
+        return samuraiCount;
+    }
+
+    public int getWizardCount() {
+        return wizardCount;
+    }
+
+    public void setNinjaCount(int ninjaCount) {
+        this.ninjaCount = ninjaCount;
+    }
+
+    public void setSamuraiCount(int samuraiCount) {
+        this.samuraiCount = samuraiCount;
+    }
+
+    public void setWizardCount(int wizardCount) {
+        this.wizardCount = wizardCount;
     }
 }
